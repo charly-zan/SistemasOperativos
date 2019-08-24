@@ -1,0 +1,2 @@
+nombre,tiempo(ms),ciclos(mHz),ram(bytes),accesos(IO)
+Proceso01,3000,250,754807296,4
