@@ -2,7 +2,7 @@
 
 <div style="display: inline-block; margin-left: 300px"><img style="align:left" src="assets/images/Escudo_CUCEI.png" width="100px" alt="logo cucei"> </div>
 
-# <center>Proyecto</center>
+# <center>Practicas de Sistemas Operativos</center>
 ![PyPI - Python Version](https://img.shields.io/badge/python-3.5%20|%203.6%20|%203.7-blue)
 
 ### <center>Universidad de Guadalajara</center>
