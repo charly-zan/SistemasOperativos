@@ -7,6 +7,7 @@
 
 ## Uso
 <p>Los siquientes elementos son necesarios para la ejecución del código</p>
+
 + Python 3.7.x
 + [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
 + PyQt 5
