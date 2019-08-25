@@ -152,7 +152,7 @@
     <property name="title">
      <string>Recursos</string>
     </property>
-    <widget class="QGraphicsView" name="graphicsView">
+    <widget class="QGraphicsView" name="gV_CPU">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -162,7 +162,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QGraphicsView" name="graphicsView_2">
+    <widget class="QGraphicsView" name="gV_RAM">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -172,7 +172,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QGraphicsView" name="graphicsView_3">
+    <widget class="QGraphicsView" name="gV_HDD">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -195,7 +195,7 @@
     <property name="title">
      <string>Tiempo de ejecución</string>
     </property>
-    <widget class="QGraphicsView" name="graphicsView_4">
+    <widget class="QGraphicsView" name="gV_Procesos">
      <property name="geometry">
       <rect>
        <x>10</x>
