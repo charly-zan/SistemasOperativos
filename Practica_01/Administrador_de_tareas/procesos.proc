@@ -1,2 +1,5 @@
 nombre,tiempo(ms),ciclos(mHz),ram(bytes),accesos(IO)
-Proceso01,3000,250,754807296,4
+Proceso_A,3000,250,75480729,4
+Proceso_B,10000,40,175480729,12
+Proceso_C,5000,600,4807296,1
+Proceso_D,1000,1300,1148072967,15
