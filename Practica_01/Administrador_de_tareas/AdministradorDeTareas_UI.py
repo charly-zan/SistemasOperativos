@@ -8,13 +8,13 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(744, 593)
-        MainWindow.setMinimumSize(QtCore.QSize(708, 495))
-        MainWindow.setMaximumSize(QtCore.QSize(111111, 111111))
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+class Ui_MainWindow_(object):
+    def setupUi(self, MainWindow_):
+        MainWindow_.setObjectName("MainWindow_")
+        MainWindow_.resize(744, 593)
+        MainWindow_.setMinimumSize(QtCore.QSize(708, 495))
+        MainWindow_.setMaximumSize(QtCore.QSize(744, 593))
+        self.centralwidget = QtWidgets.QWidget(MainWindow_)
         self.centralwidget.setObjectName("centralwidget")
         self.btn_01 = QtWidgets.QPushButton(self.centralwidget)
         self.btn_01.setGeometry(QtCore.QRect(20, 520, 100, 50))
@@ -67,32 +67,32 @@ class Ui_MainWindow(object):
         self.btn_Limpiar = QtWidgets.QPushButton(self.centralwidget)
         self.btn_Limpiar.setGeometry(QtCore.QRect(620, 510, 111, 71))
         self.btn_Limpiar.setObjectName("btn_Limpiar")
-        MainWindow.setCentralWidget(self.centralwidget)
+        MainWindow_.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(MainWindow_)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow_)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, MainWindow_):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Administrador de Tareas"))
-        self.btn_01.setText(_translate("MainWindow", "Proceso A"))
-        self.btn_02.setText(_translate("MainWindow", "Proceso B"))
-        self.btn_03.setText(_translate("MainWindow", "Proceso D"))
-        self.btn_04.setText(_translate("MainWindow", "Proceso C"))
-        self.btn_KA.setText(_translate("MainWindow", "Matar procesos"))
-        self.gB_colaProcesos.setTitle(_translate("MainWindow", "Cola de procesos"))
-        self.gB_procesosActuales.setTitle(_translate("MainWindow", "Procesos Actuales"))
-        self.gB_recursos.setTitle(_translate("MainWindow", "Recursos"))
-        self.gB_procesosTiempo.setTitle(_translate("MainWindow", "Tiempo de ejecución"))
-        self.btn_Limpiar.setText(_translate("MainWindow", "Limpiar cola"))
+        MainWindow_.setWindowTitle(_translate("MainWindow_", "Administrador de Tareas"))
+        self.btn_01.setText(_translate("MainWindow_", "Proceso A"))
+        self.btn_02.setText(_translate("MainWindow_", "Proceso B"))
+        self.btn_03.setText(_translate("MainWindow_", "Proceso D"))
+        self.btn_04.setText(_translate("MainWindow_", "Proceso C"))
+        self.btn_KA.setText(_translate("MainWindow_", "Matar procesos"))
+        self.gB_colaProcesos.setTitle(_translate("MainWindow_", "Cola de procesos"))
+        self.gB_procesosActuales.setTitle(_translate("MainWindow_", "Procesos Actuales"))
+        self.gB_recursos.setTitle(_translate("MainWindow_", "Recursos"))
+        self.gB_procesosTiempo.setTitle(_translate("MainWindow_", "Tiempo de ejecución"))
+        self.btn_Limpiar.setText(_translate("MainWindow_", "Limpiar cola"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
+    MainWindow_ = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow_()
+    ui.setupUi(MainWindow_)
+    MainWindow_.show()
     sys.exit(app.exec_())
 

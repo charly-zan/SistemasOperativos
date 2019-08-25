@@ -1,9 +1,11 @@
 from AdministradorDeTareas_UI import *
 
-class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
+class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow_):
     def __init__(self, *args, **kwargs):
         QtWidgets.QMainWindow.__init__(self, *args, **kwargs)
+        
         self.setupUi(self)
+        self.procesos = []
 
         # Acciones de botones
         self.btn_01.clicked.connect(self.agregarProcesoA)
@@ -27,11 +29,43 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def limpiarCola(self):
         self.colaProcesos.clear()
 
+    def leerArchivo(self):
+        mensaje = QtWidgets.QMessageBox()
+        mensaje.setIcon(QtWidgets.QMessageBox.Warning)
+        mensaje.setText("Por favor selecciona un archivo")
+        mensaje.setInformativeText("Es necesario que selecciones un archivo *.proc para continuar con la ejecución")
+        mensaje.setWindowTitle("Fallo la selección de archivo")
+        mensaje.setStandardButtons(QtWidgets.QMessageBox.Retry | QtWidgets.QMessageBox.Cancel)
+        mensaje.setDefaultButton(QtWidgets.QMessageBox.Retry)
+
+        orden = True
+
+        while orden:
+            nombreArchivo = QtWidgets.QFileDialog.getOpenFileName(self, "Abrir archivo", ".", "Procesos (*.proc)")
+            
+            if not nombreArchivo:
+                orden = False
+                archivo = open(nombreArchivo[0], "r")
+                for linea in archivo.readlines():
+                    self.procesos.append(linea.split(","))
+                self.procesos.pop(0)
+                print(self.procesos)
+                return True
+            else:
+                orden = mensaje.exec_()
+                # 4194304 código de retorno para boton cancelar
+                if orden == 4194304:
+                    orden = False
+        return False
+
 def main():
     app = QtWidgets.QApplication([])
     window = MainWindow()
-    window.show()
-    app.exec_()
+    if window.leerArchivo():
+        window.show()
+        app.exec_()
+    else:
+        return -1
 
 
 if __name__ == "__main__":

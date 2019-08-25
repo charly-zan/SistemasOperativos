@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>MainWindow_</class>
+ <widget class="QMainWindow" name="MainWindow_">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -18,8 +18,8 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>111111</width>
-    <height>111111</height>
+    <width>744</width>
+    <height>593</height>
    </size>
   </property>
   <property name="windowTitle">
