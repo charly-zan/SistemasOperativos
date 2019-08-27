@@ -43,21 +43,27 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow_):
         while orden:
             nombreArchivo = QtWidgets.QFileDialog.getOpenFileName(self, "Abrir archivo", ".", "Procesos (*.proc)")
             
-            if not nombreArchivo:
+            if nombreArchivo:
+                print(nombreArchivo)
                 orden = False
                 archivo = open(nombreArchivo[0], "r")
-                for linea in archivo.readlines():
-                    self.procesos.append(linea.split(","))
-                self.procesos.pop(0)
+                for linea in archivo:
+                    self.procesos.append(linea.strip().split(","))
+
                 print(self.procesos)
                 return True
             else:
+                print(nombreArchivo)
                 orden = mensaje.exec_()
                 # 4194304 código de retorno para boton cancelar
                 if orden == 4194304:
                     orden = False
         return False
 
+    def tomarProceso(self):
+        if(len(self.colaProcesos)):
+            #Tomar procesos
+        
 def main():
     app = QtWidgets.QApplication([])
     window = MainWindow()
